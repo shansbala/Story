@@ -1,0 +1,107 @@
+[SSB]$: cd ~/Desktop
+[SSB]$: mkdir Story
+[SSB]$: cd Story
+[SSB]$: ls
+[SSB]$: touch chapter1.txt
+[SSB]$: open chapter1.txt
+[SSB]$: git init
+Initialized empty Git repository in /Users/shanbala/Desktop/Story/.git/
+[SSB]$: ls -a
+.		..		.git		chapter1.txt
+[SSB]$: git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[SSB]$: git add chapter1.txt
+[SSB]$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   chapter1.txt
+
+[SSB]$: git commit -m "Complete Chapter 1"
+[master (root-commit) 248b68e] Complete Chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+[SSB]$: git log
+commit 248b68ed1e4176fcd6fd60ff1e4da324ca08bf42 (HEAD -> master)
+Author: ShanBala <shan.sundar.bala@gmail.com>
+Date:   Sun Jul 19 15:11:56 2020 -0400
+
+    Complete Chapter 1
+[SSB]$: touch Chapter2.txt
+[SSB]$: touch Chapter3.txt
+[SSB]$: open Chapter2.txt
+[SSB]$: open Chapter3.txt
+[SSB]$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Chapter2.txt
+	Chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[SSB]$: git add .
+[SSB]$: git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Chapter2.txt
+	new file:   Chapter3.txt
+
+[SSB]$: git commit -m "Complete chapter 2 and 3"
+[master 2df9f31] Complete chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Chapter2.txt
+ create mode 100644 Chapter3.txt
+[SSB]$: git log
+commit 2df9f3128c2d4319dbb9d08cfdaab1ad0ae99d04 (HEAD -> master)
+Author: ShanBala <shan.sundar.bala@gmail.com>
+Date:   Sun Jul 19 15:16:24 2020 -0400
+
+    Complete chapter 2 and 3
+
+commit 248b68ed1e4176fcd6fd60ff1e4da324ca08bf42
+Author: ShanBala <shan.sundar.bala@gmail.com>
+Date:   Sun Jul 19 15:11:56 2020 -0400
+
+    Complete Chapter 1
+[SSB]$: touch log.txt
+[SSB]$: open log.txt 
+[SSB]$: open Chapter3.txt
+[SSB]$: git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Chapter3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[SSB]$: git diff
+diff --git a/Chapter3.txt b/Chapter3.txt
+index 7986d36..2def68f 100644
+--- a/Chapter3.txt
++++ b/Chapter3.txt
+@@ -1 +1,2 @@
+-It was the spring of hope, it was the winter of despair.
+\ No newline at end of file
++uiydfiytgu;jilkm
++;lkml;jbbh
+\ No newline at end of file
+[SSB]$: git checkout Chapter3.txt
+Updated 1 path from the index
+[SSB]$: open Chapter3.txt
+[SSB]$: 
